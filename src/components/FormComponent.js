@@ -39,6 +39,10 @@ const FormComponent = (props) => {
   };
 
   const list = [{ label: "lira", value: 4 }];
+  const list2 = [
+    { label: "lira", value: 4 },
+    { label: "Beenelux", value: 2 },
+  ];
 
   return (
     <View style={styles.root}>
@@ -66,6 +70,14 @@ const FormComponent = (props) => {
         props={{
           label: "Siège",
           list: list,
+        }}
+        component={renderSelect}
+      />
+      <Field
+        name={"Centre de travail"}
+        props={{
+          label: "Centre",
+          list: list2,
         }}
         component={renderSelect}
       />
